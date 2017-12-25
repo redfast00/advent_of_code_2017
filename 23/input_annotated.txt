@@ -1,0 +1,39 @@
+  set b 93
+  set c 93
+  jnz a DEBUG
+  jnz 1 NO_DEBUG
+DEBUG:
+  set b 109300
+  set c 126300
+  -- B = 9300
+NO_DEBUG:
+  set f 1
+  set d 2
+SCHOOL:
+  set e 2
+BACK:
+  set g d
+  mul g e
+  sub g b
+  jnz g SKIP
+  set f 0
+SKIP:
+  sub e -1
+  set g e
+  sub g b
+  jnz g BACK
+  sub d -1
+  set g d
+  sub g b
+  jnz g SCHOOL
+  jnz f F_IS_ZERO
+  sub h -1
+F_IS_ZERO:
+  set g b
+  sub g c
+  jnz g ADD_SEVENTEEN
+  jnz 1 END
+ADD_SEVENTEEN
+  sub b -17
+  jnz 1 NO_DEBUG
+END:

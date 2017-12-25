@@ -1,0 +1,6 @@
+d * e == input_b
+for e in range(b):
+if input_b is not prime:
+  counter ++
+
+all composite primes between b and c increasing by 17
